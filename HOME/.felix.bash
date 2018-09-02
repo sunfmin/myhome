@@ -5,6 +5,7 @@ export APPKIT_LOG_HUMAN=true
 
 export HISTSIZE=500000
 export HISTFILESIZE=1000000
+export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 
 alias less=bat
 alias find=fd
