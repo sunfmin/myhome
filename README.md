@@ -1,7 +1,7 @@
 Install
 
 ```
-$ curl -fsSL https://raw.githubusercontent.com/sunfmin/myhome/master/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/sunfmin/myhome/master/install.sh | bash
 ```
 
 Edit `.profile`, Add this line
