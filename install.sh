@@ -3,3 +3,7 @@ brew install fzf fd rg bat entr prettyping jq
 yes | /usr/local/opt/fzf/install --no-fish --no-zsh --no-update-rc
 curl -fsSL https://raw.githubusercontent.com/sunfmin/myhome/master/HOME/.slate > ~/.slate
 curl -fsSL https://raw.githubusercontent.com/sunfmin/myhome/master/HOME/.felix.bash > ~/.felix.bash
+if ! grep ".felix.bash" ~/.profile; then
+  echo 'test -f ~/.felix.bash && source ~/.felix.bash' | tee -a ~/.profile
+  echo "Added to .profile"
+fi
