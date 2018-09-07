@@ -10,6 +10,7 @@ export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 
 alias docker-rm-exited='docker ps --filter "status=exited" -q | xargs docker rm'
 alias k=kubectl
+alias kl=kubeless
 alias less=bat
 alias find=fd
 alias ping='prettyping --nolegend'
