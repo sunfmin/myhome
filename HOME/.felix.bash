@@ -12,7 +12,7 @@ alias docker-rm-exited='docker ps --filter "status=exited" -q | xargs docker rm'
 alias k=kubectl
 alias kl=kubeless
 alias less=bat
-alias find=fd
+# alias find=fd
 alias ping='prettyping --nolegend'
 alias preview="fzf --preview 'bat --color \"always\" {}'"
 
