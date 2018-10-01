@@ -15,7 +15,7 @@ alias less=bat
 # alias find=fd
 alias ping='prettyping --nolegend'
 alias preview="fzf --preview 'bat --color \"always\" {}'"
-alias jfmt="find . -name "*.jsonnet" | xargs jsonnet fmt -i"
+alias jfmt="find . -name '*.jsonnet' | xargs jsonnet fmt -i"
 
 # add support for ctrl+o to open selected file in VS Code
 export FZF_DEFAULT_OPTS="--bind='ctrl-o:execute(code {})+abort'"
