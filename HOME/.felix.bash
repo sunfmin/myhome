@@ -9,6 +9,7 @@ export HISTFILESIZE=1000000
 export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 
 alias docker-rm-exited='docker ps --filter "status=exited" -q | xargs docker rm'
+alias docker-rmi-untagged='docker rmi $(docker images | grep "^<none>" | awk "{print $3}")'
 alias k=kubectl
 alias kl=kubeless
 alias less=bat
