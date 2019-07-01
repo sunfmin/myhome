@@ -19,7 +19,7 @@ alias preview="fzf --preview 'bat --color \"always\" {}'"
 alias jfmt="find . -name '*.jsonnet' | xargs jsonnet fmt -i"
 alias dockersnapshot="curl -fsSL https://raw.githubusercontent.com/theplant/plantbuild/master/dockercache | CMD=snapshot DIR=~/.cache bash"
 alias dockerrestore="curl -fsSL https://raw.githubusercontent.com/theplant/plantbuild/master/dockercache | CMD=restore DIR=~/.cache bash"
-alias cleanhistory="awk '!x[$0]++' ~/.bash_history > ~/.bash_history"
+alias cleanhistory="awk '!x[$0]++' ~/.bash_history > ~/.cleaned_bash_history && cp ~/.cleaned_bash_history ~/.bash_history"
 # add support for ctrl+o to open selected file in VS Code
 export FZF_DEFAULT_OPTS="--bind='ctrl-o:execute(code {})+abort'"
 
