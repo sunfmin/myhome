@@ -8,4 +8,4 @@ if ! grep ".felix.bash" ~/.profile; then
   echo "Added to .profile"
 fi
 
-sudo curl -fsSL https://raw.githubusercontent.com/sunfmin/myhome/master/etc/hosts > /etc/hosts
+sudo bash -c "curl -fsSL https://raw.githubusercontent.com/sunfmin/myhome/master/etc/hosts > /etc/hosts"
