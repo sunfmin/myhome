@@ -7,3 +7,5 @@ if ! grep ".felix.bash" ~/.profile; then
   echo 'test -f ~/.felix.bash && source ~/.felix.bash' | tee -a ~/.profile
   echo "Added to .profile"
 fi
+
+sudo curl -fsSL https://raw.githubusercontent.com/sunfmin/myhome/master/etc/hosts > /etc/hosts
