@@ -8,6 +8,13 @@ export HISTSIZE=500000
 export HISTFILESIZE=1000000
 export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 
+transfer() {
+    curl -H "Max-Downloads: 3" --progress-bar --upload-file "$1" https://transfer.sh/$(basename "$1") | tee /dev/null;
+    echo
+}
+
+alias transfer=transfer
+
 alias docker-rm-exited='docker ps --filter "status=exited" -q | xargs docker rm'
 alias docker-cleanup='docker rmi $(docker ps -a -q); docker image prune --force'
 alias k=kubectl
