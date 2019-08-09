@@ -28,6 +28,6 @@ alias dockersnapshot="curl -fsSL https://raw.githubusercontent.com/theplant/plan
 alias dockerrestore="curl -fsSL https://raw.githubusercontent.com/theplant/plantbuild/master/dockercache | CMD=restore DIR=~/.cache bash"
 # add support for ctrl+o to open selected file in VS Code
 export FZF_DEFAULT_OPTS="--bind='ctrl-o:execute(code {})+abort'"
-
+export HISTCONTROL=ignoredups
 
 test -f ~/.fzf.bash && source ~/.fzf.bash
