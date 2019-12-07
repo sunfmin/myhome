@@ -21,7 +21,7 @@ alias k=kubectl
 alias kl=kubeless
 alias less=bat
 # alias find=fd
-alias ping='prettyping --nolegend'
+# alias ping='prettyping --nolegend'
 alias preview="fzf --preview 'bat --color \"always\" {}'"
 alias jfmt="find . -name '*.jsonnet' | xargs jsonnet fmt -i"
 alias dockersnapshot="curl -fsSL https://raw.githubusercontent.com/theplant/plantbuild/master/dockercache | CMD=snapshot DIR=~/.cache bash"
