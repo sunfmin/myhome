@@ -2,8 +2,8 @@ shopt -s histappend # https://www.digitalocean.com/community/tutorials/how-to-us
 brew install fzf fd rg bat entr prettyping jq
 yes | /opt/homebrew/opt/fzf/install --no-fish --no-bash --no-update-rc
 curl -fsSL https://raw.githubusercontent.com/sunfmin/myhome/master/HOME/.slate > ~/.slate
-curl -fsSL https://raw.githubusercontent.com/sunfmin/myhome/master/HOME/.felix.bash > ~/.felix.bash
-if ! grep ".felix.bash" ~/.zshrc; then
-  echo 'test -f ~/.felix.bash && source ~/.felix.bash' | tee -a ~/.zshrc
+curl -fsSL https://raw.githubusercontent.com/sunfmin/myhome/master/HOME/.felix.zsh > ~/.felix.zsh
+if ! grep ".felix.zsh" ~/.zshrc; then
+  echo 'test -f ~/.felix.zsh && source ~/.felix.zsh' | tee -a ~/.zshrc
   echo "Added to .profile"
 fi

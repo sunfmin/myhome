@@ -1,7 +1,7 @@
 export GOPATH=$HOME/go
 export Android_SDK=$HOME/Library/Android/sdk
 export PATH=$GOPATH/bin:$HOME/.deno/bin:$PATH:$Android_SDK/platform-tools/
-export CDPATH=$GOPATH/src/github.com/theplant:$GOPATH/src/github.com/sunfmin:$GOPATH/src/github.com:$GOPATH/src/bitbucket.org/sunfmin
+# export CDPATH=$GOPATH/src/github.com/theplant:$GOPATH/src/github.com/sunfmin:$GOPATH/src/github.com:$GOPATH/src/bitbucket.org/sunfmin
 export APPKIT_LOG_HUMAN=true
 export EDITOR="code --wait"
 
