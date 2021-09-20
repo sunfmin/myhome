@@ -30,4 +30,4 @@ alias dockerrestore="curl -fsSL https://raw.githubusercontent.com/theplant/plant
 export FZF_DEFAULT_OPTS="--bind='ctrl-o:execute(code {})+abort'"
 export HISTCONTROL=ignoredups
 
-test -f ~/.fzf.bash && source ~/.fzf.bash
+test -f ~/.fzf.zsh && source ~/.fzf.zsh
