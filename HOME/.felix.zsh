@@ -49,7 +49,6 @@ function remove_video_part() {
     rm _rvp_*.ts
 }
 
-export -f remove_video_part
-
+alias remove_video_part=remove_video_part
 
 test -f ~/.fzf.zsh && source ~/.fzf.zsh
