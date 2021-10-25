@@ -30,4 +30,26 @@ alias dockerrestore="curl -fsSL https://raw.githubusercontent.com/theplant/plant
 export FZF_DEFAULT_OPTS="--bind='ctrl-o:execute(code {})+abort'"
 export HISTCONTROL=ignoredups
 
+function remove_video_part() {
+    FROM=$1
+    TO=$2
+    FILE=$3
+    if [ -z "$FILE" ]
+    then
+        echo "usage: ./remove_video_part.sh 01:16:00 01:17:20 \"abc.mp4\""
+        exit 1
+    fi
+
+    ffmpeg -to $FROM -i "$FILE" \
+        -ss $TO -i "$FILE" \
+        -map 0:v -map 0:a -c copy _rvp_part1.ts \
+        -map 1:v -map 1:a -c copy _rvp_part2.ts
+    ffmpeg -i 'concat:_rvp_part1.ts|_rvp_part2.ts' -c copy _rvp_removed.ts
+    ffmpeg -i _rvp_removed.ts -c copy "$FILE"_removed.mp4
+    rm _rvp_*.ts
+}
+
+export -f remove_video_part
+
+
 test -f ~/.fzf.zsh && source ~/.fzf.zsh
